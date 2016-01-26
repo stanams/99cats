@@ -5,3 +5,12 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+9.times do
+  Cat.create!(
+  name: Faker::Name.name,
+  birth_date: Faker::Time.between(14.years.ago, Time.now, :all),
+  sex: ["M","F"].sample,
+  color: 0xFFFFFF
+  )
+end
