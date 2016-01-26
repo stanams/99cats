@@ -1,17 +1,15 @@
 class Cat < ActiveRecord::Base
+  COLORS = [0xFFFFFF, 0x000000, 0x5C3317]
+
+  def self.colors
+    COLORS
+  end
+
   validates :birth_date, presence: true
   validates :name, presence: true
   validates :sex, inclusion: {in: %w(M F)}
-  validates :color, inclusion: {in: [0xFFFFFF]}
+  validates :color, inclusion: Cat.colors, allow_blank: true
 
-
-  # COLORS = [
-  #   0xFFFFFF
-  # ]
-  #
-  # def self.colors
-  #   COLORS
-  # end
 
   def age
     Time.now.year - birth_date.year
