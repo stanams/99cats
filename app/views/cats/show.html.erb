@@ -1,0 +1,22 @@
+<body>
+  <h1>Here is <%= @cat.name %>! </h1>
+
+
+  <table>
+    <tr>
+      <th>Age: </th>
+      <th>Sex: </th>
+      <th>Color: </th>
+      <th>Description</th>
+    </tr>
+    <tr>
+        <td><%= @cat.age %></td>
+        <td><%= @cat.sex %></td>
+        <td><%= @cat.color %></td>
+        <td><%= @cat.description %></td>
+    </tr>
+
+  </table>
+  <%= link_to "Edit", edit_cat_url(@cat) %>
+  <%= link_to "Index", cats_url %>
+</body>
