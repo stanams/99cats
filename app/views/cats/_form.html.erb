@@ -23,6 +23,7 @@
 
   <label for="cat_coat_color">Coat color</label>
   <select name="cat[color]">
+    <%# Cat::COLORS.each_key do |color| %>
     <option value="<%= Cat.colors[:brown] %>">Brown</option>
     <option value="<%= Cat.colors[:black] %>">Black</option>
     <option value="<%= Cat.colors[:white] %>">White</option>

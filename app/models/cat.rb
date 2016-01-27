@@ -13,6 +13,7 @@ class Cat < ActiveRecord::Base
   validates :sex, inclusion: {in: %w(M F)}
   validates :color, inclusion: Cat.colors.values, allow_blank: true
 
+  has_many :rentals, class_name: "CatRentalRequest"
 
   def age
     Time.now.year - birth_date.year
