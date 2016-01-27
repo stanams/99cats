@@ -12,11 +12,12 @@
     <tr>
         <td><%= @cat.age %></td>
         <td><%= @cat.sex %></td>
-        <td><%= @cat.color %></td>
+        <td><%= Cat::COLOR_VALUES[@cat.color] %></td>
         <td><%= @cat.description %></td>
     </tr>
 
   </table>
   <%= link_to "Edit", edit_cat_url(@cat) %>
   <%= link_to "Index", cats_url %>
+  <%= link_to "See rentals",cat_rentals_url(@cat) %>
 </body>

@@ -4,6 +4,12 @@ class Cat < ActiveRecord::Base
     black: 0x000000,
     brown: 0x5C3317}
 
+    COLOR_VALUES = {
+      0xFFFFFF => "White",
+      0x000000 => "Black",
+      0x5C3317 => "Brown"}
+
+
   def self.colors
     COLORS
   end

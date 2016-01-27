@@ -16,7 +16,6 @@ class CatsController < ApplicationController
 
   def create
     @cat = Cat.new(cat_params)
-    p cat_params[:color]
     if @cat.save
       redirect_to cat_url(@cat)
     else

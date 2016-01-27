@@ -1,0 +1,10 @@
+<h1> Rentals for <%= @cat.name %> </h1>
+
+<% @rentals.each do |rental| %>
+  Start Date: <%= rental.start_date %>
+  End Date: <%= rental.end_date %>
+  Status: <%= rental.status %>
+  <br>
+
+    <%= link_to "Index", cats_url %>
+<% end %>
